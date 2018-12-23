@@ -1,0 +1,7 @@
+# haskell
+.stack-work/
+wfc-haskell.cabal
+*~
+
+# vim
+*.sw?
