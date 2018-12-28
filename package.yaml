@@ -23,7 +23,11 @@ dependencies:
 - base >= 4.7 && < 5
 - bmp
 - bytestring
-#- lens
+- hashable
+- unordered-containers
+- vector
+# - repa
+# - lens
 
 library:
   source-dirs: src

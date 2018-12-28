@@ -9,7 +9,5 @@ main :: IO ()
 main = do
     args <- getArgs
     case args of
-        [] -> usage
-        [_] -> usage
-        [inputFile, outputFile] -> return () -- call into Lib.hs
+        [inputFile, outputFile] -> return () -- TODO: call into Lib.hs
         _ -> usage
