@@ -24,6 +24,7 @@ dependencies:
 - bmp
 - bytestring
 - hashable
+- random
 - unordered-containers
 - vector
 # - repa

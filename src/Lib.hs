@@ -4,7 +4,7 @@ module Lib
     ) where
 
 import Codec.BMP
-import qualified Counter
+import qualified Counter as C
 import qualified Data.ByteString as BS
 import Data.Hashable
 import qualified Data.Vector as V
@@ -49,9 +49,9 @@ constructBitmap width height = BitmapMeta width height . V.unfoldr go
 
 -- | Count the frequencies of unique NxM subarrays of a bitmap.
 -- Possible optimization: use V.unsafeSlice
-findPatterns :: Int -> Int -> BitmapMeta -> Counter.Counter Bitmap
+findPatterns :: Int -> Int -> BitmapMeta -> C.Counter Bitmap
 findPatterns n m (BitmapMeta width height pixels) =
-    foldr Counter.insert Counter.empty allSubarrays
+    foldr C.insert C.empty allSubarrays
   where
     allSubarrays =
         let is = [0 .. (height - n)]  -- rows
